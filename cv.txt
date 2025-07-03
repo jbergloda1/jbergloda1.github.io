@@ -7,7 +7,7 @@ Phone: +84 XXX XXX XXX
 Location: Ho Chi Minh City, Vietnam
 
 CAREER HIGHLIGHTS
-• 4+ Years experienced Software Developer with a strong background in frontend and cross-platform mobile development
+• 5+ Years experienced Software Developer with a strong background in frontend and cross-platform mobile development
 • Over 4 years of experience working with JavaScript
 • Around 4 years of hands-on experience with modern frontend frameworks including Vue.js, React.js, and AngularJS
 • Approximately 2 years of experience developing cross-platform mobile applications using React Native and Flutter

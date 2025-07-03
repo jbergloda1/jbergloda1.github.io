@@ -6,13 +6,13 @@
     
     <!-- SEO Meta Tags -->
     <title>Tran Nhat Linh - Software Developer Portfolio | Frontend & Mobile Development</title>
-    <meta name="description" content="Tran Nhat Linh - Experienced Software Developer with 4+ years in frontend development, React Native, Vue.js, and cross-platform mobile applications. View portfolio and projects.">
+    <meta name="description" content="Tran Nhat Linh - Experienced Software Developer with 5+ years in frontend development, React Native, Vue.js, and cross-platform mobile applications. View portfolio and projects.">
     <meta name="keywords" content="Tran Nhat Linh, Software Developer, Frontend Developer, React Native, Vue.js, Mobile Development, JavaScript, TypeScript, Vietnam">
     <meta name="author" content="Tran Nhat Linh">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Tran Nhat Linh - Software Developer Portfolio">
-    <meta property="og:description" content="Experienced Software Developer with 4+ years in frontend development, React Native, Vue.js, and cross-platform mobile applications.">
+    <meta property="og:description" content="Experienced Software Developer with 5+ years in frontend development, React Native, Vue.js, and cross-platform mobile applications.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jbergloda1.github.io/">
     <meta property="og:image" content="https://jbergloda1.github.io/images/og-image.jpg">
@@ -21,7 +21,7 @@
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Tran Nhat Linh - Software Developer Portfolio">
-    <meta name="twitter:description" content="Experienced Software Developer with 4+ years in frontend development, React Native, Vue.js, and cross-platform mobile applications.">
+    <meta name="twitter:description" content="Experienced Software Developer with 5+ years in frontend development, React Native, Vue.js, and cross-platform mobile applications.">
     <meta name="twitter:image" content="https://jbergloda1.github.io/images/twitter-card.jpg">
     
     <!-- Favicon -->
@@ -464,6 +464,75 @@
                 flex-direction: column;
                 align-items: center;
             }
+            
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background: white;
+                color: #333;
+                box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+                border-radius: 8px;
+                z-index: 2000;
+                width: 200px;
+                padding: 1rem 0;
+                transition: all 0.3s cubic-bezier(.4,0,.2,1);
+            }
+            .nav-links.active a {
+                color: #333;
+                padding: 0.75rem 1.5rem;
+                border-radius: 6px;
+                font-size: 1.1rem;
+                margin: 0 0.5rem;
+                transition: background 0.2s;
+            }
+            .nav-links.active a:hover {
+                background: #f0f4ff;
+                color: #667eea;
+            }
+        }
+        
+        .skills-dropdown { position: relative; }
+        .skills-dropdown .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            min-width: 160px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            z-index: 3000;
+            padding: 0.5rem 0;
+        }
+        .skills-dropdown:hover .dropdown-menu,
+        .skills-dropdown:focus-within .dropdown-menu {
+            display: block;
+        }
+        .skills-dropdown .dropdown-menu li {
+            list-style: none;
+        }
+        .skills-dropdown .dropdown-menu a {
+            display: block;
+            color: #333;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: background 0.2s;
+        }
+        .skills-dropdown .dropdown-menu a:hover {
+            background: #f0f4ff;
+            color: #667eea;
+        }
+        @media (max-width: 768px) {
+            .skills-dropdown .dropdown-menu {
+                position: static;
+                min-width: 100%;
+                box-shadow: none;
+            }
         }
     </style>
 </head>
@@ -477,6 +546,16 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="cv.html">Resume</a></li>
+                <li class="skills-dropdown">
+                    <a href="#" style="position:relative;">Skills <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="skills/react-native.html">React Native</a></li>
+                        <li><a href="skills/flutter.html">Flutter</a></li>
+                        <li><a href="skills/vuejs.html">Vue.js</a></li>
+                        <li><a href="skills/angularjs.html">AngularJS</a></li>
+                        <li><a href="skills/nodejs.html">Node.js</a></li>
+                    </ul>
+                </li>
             </ul>
             <div class="mobile-menu">
                 <span></span>
@@ -491,7 +570,7 @@
         <div class="container">
             <h1>Tran Nhat Linh</h1>
             <h2>Software Developer</h2>
-            <p>4+ years of experience in frontend development, React Native, Vue.js, and cross-platform mobile applications. Passionate about creating innovative solutions and delivering high-quality products.</p>
+            <p>5+ years of experience in frontend development, React Native, Vue.js, and cross-platform mobile applications. Passionate about creating innovative solutions and delivering high-quality products.</p>
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary">View Projects</a>
                 <a href="cv.html" class="btn btn-secondary">Download CV</a>
@@ -693,6 +772,15 @@
         
         mobileMenu.addEventListener('click', () => {
             navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu after clicking any nav link (including dropdown)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768 && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            });
         });
 
         // Form submission
