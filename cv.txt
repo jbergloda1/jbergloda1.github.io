@@ -1,0 +1,167 @@
+TRAN NHAT LINH
+Software Developer
+
+CONTACT INFORMATION
+Email: tran.nhat.linh@email.com
+Phone: +84 XXX XXX XXX
+Location: Ho Chi Minh City, Vietnam
+
+CAREER HIGHLIGHTS
+• 4+ Years experienced Software Developer with a strong background in frontend and cross-platform mobile development
+• Over 4 years of experience working with JavaScript
+• Around 4 years of hands-on experience with modern frontend frameworks including Vue.js, React.js, and AngularJS
+• Approximately 2 years of experience developing cross-platform mobile applications using React Native and Flutter
+• 1 year of backend development experience with PHP
+• Experience deploying web applications on AWS, including setting up CI/CD pipelines, managing S3, and configuring Lambda functions
+• Familiar with serverless architecture and microservices integration using AWS Lambda
+• Proficient in Agile development methodologies and experienced in working within Scrum teams for iterative delivery and team collaboration
+
+TECHNICAL SKILLS
+
+Domain Expertise:
+• Web Application Development
+• Mobile Application Development
+• Content Management Systems (CMS)
+• E-commerce Platforms
+• Real-time Communication Applications
+
+Programming & Scripting Languages:
+• Expert: JavaScript, HTML, CSS
+• Intermediate: Node.js, PHP, Dart
+• Familiar: Java, .NET (C#)
+
+Frameworks & Libraries:
+• React, React Native, Vue.js, AngularJS
+• Flutter, Laravel
+• Entity Framework, MVC Pattern
+
+Database:
+• MS SQL Server
+• MySQL
+• PostgreSQL
+
+Development Tools & Platforms:
+• Visual Studio, Visual Studio Code, Android Studio
+• Postman, Git, SVN, Trello, Jira
+
+Cloud & DevOps:
+• AWS Services (Lambda, S3, EC2, etc.)
+• Google Cloud Platform
+• Cloudflare
+
+RELEVANT PROJECTS
+
+The Bathroom Factory
+Franchise web application that supplies and manages bathroom facilities
+Duties:
+• Design and implement new features
+• Maintenance and bug fixing
+Technologies: .NET, MS SQL Server, Visual Studio
+
+Taurus
+Mobile application that manages Tasks, communicates, and provides information for users from The Bathroom Factory
+Duties:
+• Design and implement new features
+• Develop reusable components
+• Maintenance and bug fixing
+Technologies: React Native/Redux, HTML/Bootstrap, VS Code, Android Studio
+
+MCH Cotocellar
+Healthcare web application providing information about health, medical equipment, and medicine. Working with Japanese customers.
+Duties:
+• Implement and develop reusable components
+• Participate in team-based development process
+• Maintenance and bug fixing
+Technologies: Vue.js/Vuex, HTML/CSS, AWS Cognito, VS Code, SVN, SonarQube
+
+Kurz Digital
+Web form application for product customization and configuration, serving German customers.
+Duties:
+• Create dynamic forms and UI workflows
+• Maintain scalable frontend architecture
+• Maintenance and bug fixing
+Technologies: React, TypeScript, Node.js, VS Code, Git
+
+Excloud Platform
+Cloud-based platform solution for Japanese enterprise clients.
+Duties:
+• Maintain backend modules
+• Implement client-requested features
+• Maintenance and bug fixing
+Technologies: PHP, VS Code, Git
+
+KB Global Banking Platform
+Web banking application for Korean customers from KB Financial Group.
+Duties:
+• Frontend development with UI/UX focus
+• Collaborate with backend team for integration
+• Maintenance and bug fixing
+Technologies: Vue.js, Node.js
+
+Voice Analytics System
+Voice analysis web application used for customer service improvement.
+Duties:
+• Build dashboard and voice analysis features
+• Work with Google Cloud services
+• Maintenance and bug fixing
+Technologies: React, Node.js, GCP
+
+ExploraScience Tour Website
+360-degree interactive website for the ExploraScience museum in Quy Nhon.
+Duties:
+• Implement immersive web experience
+• Customize WordPress templates and plugins
+• Maintenance and bug fixing
+Technologies: WordPress
+
+Video Generation Platform
+Cloud-based system that generates videos based on templates and data inputs, for UK clients.
+Duties:
+• Develop frontend video logic with Remotion
+• Handle AWS-based video rendering workflows
+• Maintenance and bug fixing
+Technologies: Remotion (React), Node.js, AWS, Cloudflare
+
+AI Presenter - ESTsoft
+Virtual AI-based presentation builder for Korean clients.
+Duties:
+• Build interactive user interfaces
+• Optimize presentation rendering
+• Maintenance and bug fixing
+Technologies: React, TypeScript
+
+Back Office System - ESTsoft
+Internal management system for ESTsoft, supporting business operations.
+Duties:
+• Design and implement Vue components
+• Ensure compatibility and responsiveness
+• Maintenance and bug fixing
+Technologies: Vue.js
+
+T-Pest System
+Mobile and web-based application for the Plant Protection Department of Vietnam.
+Duties:
+• Develop cross-platform mobile features
+• Maintain and test responsive web UI
+• Maintenance and bug fixing
+Technologies: React Native, React, TypeScript
+
+Bluetooth Low Energy Data Transfer
+Pilot project for T-Pest to enable data transfer from mobile devices to Raspberry Pi using Bluetooth Low Energy.
+Duties:
+• Develop BLE communication module
+• Integrate mobile app with Raspberry Pi
+• Test and optimize data transmission stability
+Technologies: Bluetooth Low Energy (BLE), React Native, Raspberry Pi (Linux)
+
+Japanese Sign Language Recognition
+Speech-to-text system for Japanese Sign Language developed by Toppa Solution, supporting accessibility for hearing-impaired users.
+Duties:
+• Develop frontend interface on Flutter and AngularJS
+• Integrate speech-to-text processing pipeline
+• Collaborate with AI/ML team for sign language recognition features
+Technologies: Flutter, AngularJS, Speech-to-Text API
+
+EDUCATION
+Quy Nhon University, Vietnam
+Bachelor of Information Technology 

@@ -1,507 +1,673 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Google Site Verification -->
-    <meta name="google-site-verification" content="j8sis4K3f6rOmhJJQUvUZB4GAgBuQrSRcbp_fkxJmKY" />
-
-    <title>Linh Trần - Fullstack Developer</title>
-    <meta name="description" content="Linh Trần - Fullstack Developer with 5+ years experience in Angular, React, VueJS, Node.js, Flutter, and more">
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tran Nhat Linh - CV</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            background-color: #f5f5f5;
         }
-
+        
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .cv-card {
+            max-width: 900px;
+            margin: 20px auto;
             background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
             overflow: hidden;
-            margin: 40px auto;
-            max-width: 1000px;
         }
-
-        /* Header Section */
+        
         .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 60px 40px;
+            padding: 40px;
             text-align: center;
-            position: relative;
         }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-            opacity: 0.3;
-        }
-
-        .profile-info {
-            position: relative;
-            z-index: 1;
-        }
-
-        .name {
-            font-size: 3rem;
-            font-weight: 700;
+        
+        .header h1 {
+            font-size: 2.5em;
             margin-bottom: 10px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            font-weight: 300;
         }
-
-        .title {
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin-bottom: 20px;
+        
+        .header h2 {
+            font-size: 1.2em;
+            font-weight: 300;
             opacity: 0.9;
         }
-
+        
         .contact-info {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             gap: 20px;
-            margin-top: 30px;
+            margin-top: 20px;
         }
-
+        
         .contact-item {
             display: flex;
             align-items: center;
             gap: 8px;
-            font-size: 0.95rem;
-            opacity: 0.9;
         }
-
-        .contact-item i {
-            width: 16px;
-        }
-
-        /* Main Content */
-        .content {
-            padding: 40px;
-        }
-
+        
         .section {
-            margin-bottom: 40px;
+            padding: 30px 40px;
+            border-bottom: 1px solid #eee;
         }
-
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
         .section-title {
-            font-size: 1.8rem;
-            font-weight: 600;
+            font-size: 1.5em;
             color: #667eea;
             margin-bottom: 20px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .experience-item, .education-item, .skill-item {
+            margin-bottom: 25px;
+        }
+        
+        .experience-header, .education-header {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 12px;
+            margin-bottom: 10px;
         }
-
-        .section-title i {
-            font-size: 1.5rem;
-        }
-
-        .summary {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #555;
-            background: #f8f9ff;
-            padding: 25px;
-            border-radius: 12px;
-            border-left: 4px solid #667eea;
-        }
-
-        /* Experience Section */
-        .experience-item {
-            margin-bottom: 30px;
-            padding: 25px;
-            border-radius: 12px;
-            background: #f8f9ff;
-            border-left: 4px solid #667eea;
-            transition: transform 0.2s ease;
-        }
-
-        .experience-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
-        }
-
-        .job-title {
-            font-size: 1.3rem;
-            font-weight: 600;
+        
+        .company, .school {
+            font-weight: bold;
+            font-size: 1.1em;
             color: #333;
-            margin-bottom: 5px;
         }
-
-        .company {
-            font-size: 1.1rem;
+        
+        .position, .degree {
+            font-style: italic;
             color: #667eea;
-            font-weight: 500;
-            margin-bottom: 5px;
         }
-
-        .duration {
-            font-size: 0.9rem;
+        
+        .date {
             color: #666;
-            margin-bottom: 15px;
+            font-size: 0.9em;
         }
-
-        .job-description {
-            color: #555;
-            line-height: 1.7;
-        }
-
-        .job-description ul {
+        
+        .description {
             margin-top: 10px;
-            padding-left: 20px;
+            line-height: 1.6;
         }
-
-        .job-description li {
-            margin-bottom: 5px;
-        }
-
-        /* Skills Section */
+        
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .skill-category h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .skill-list {
+            list-style: none;
+        }
+        
+        .skill-list li {
+            margin-bottom: 5px;
+            padding-left: 15px;
+            position: relative;
+        }
+        
+        .skill-list li:before {
+            content: "•";
+            color: #667eea;
+            position: absolute;
+            left: 0;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
-
-        .skill-category {
-            background: #f8f9ff;
-            padding: 25px;
-            border-radius: 12px;
+        
+        .project-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
             border-left: 4px solid #667eea;
         }
-
-        .skill-category h4 {
-            font-size: 1.2rem;
-            font-weight: 600;
+        
+        .project-title {
+            font-weight: bold;
             color: #333;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            margin-bottom: 8px;
         }
-
-        .skill-tags {
+        
+        .project-description {
+            color: #666;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        
+        .project-duties {
+            margin-bottom: 10px;
+        }
+        
+        .project-duties h5 {
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        
+        .project-tech {
+            margin-top: 10px;
+        }
+        
+        .project-tech h5 {
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        
+        .tech-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 5px;
         }
-
-        .skill-tag {
+        
+        .tech-tag {
             background: #667eea;
             color: white;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-
-        /* Education & Certifications */
-        .education-item, .certification-item {
-            background: #f8f9ff;
-            padding: 25px;
+            padding: 2px 8px;
             border-radius: 12px;
-            border-left: 4px solid #667eea;
+            font-size: 0.8em;
+        }
+        
+        .highlights {
+            background: #f0f4ff;
+            padding: 20px;
+            border-radius: 8px;
             margin-bottom: 20px;
         }
-
-        .education-title, .certification-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 5px;
-        }
-
-        .education-school, .certification-issuer {
+        
+        .highlights h3 {
             color: #667eea;
-            font-weight: 500;
-            margin-bottom: 5px;
+            margin-bottom: 15px;
         }
-
-        .education-year, .certification-year {
-            color: #666;
-            font-size: 0.9rem;
+        
+        .highlights ul {
+            list-style: none;
         }
-
-        /* Responsive Design */
+        
+        .highlights li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .highlights li:before {
+            content: "✓";
+            color: #667eea;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
         @media (max-width: 768px) {
             .container {
-                padding: 10px;
+                margin: 10px;
             }
             
             .header {
-                padding: 40px 20px;
-            }
-            
-            .name {
-                font-size: 2.2rem;
-            }
-            
-            .title {
-                font-size: 1.2rem;
-            }
-            
-            .content {
                 padding: 20px;
             }
             
-            .contact-info {
-                flex-direction: column;
-                gap: 10px;
+            .section {
+                padding: 20px;
             }
             
-            .skills-grid {
+            .experience-header, .education-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+            
+            .project-grid {
                 grid-template-columns: 1fr;
             }
         }
-
-        @media (max-width: 480px) {
-            .name {
-                font-size: 1.8rem;
-            }
-            
-            .title {
-                font-size: 1rem;
-            }
-            
-            .section-title {
-                font-size: 1.5rem;
-            }
-        }
-
-        /* Animation */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .section {
-            animation: fadeInUp 0.6s ease-out;
-        }
-
-        .section:nth-child(2) { animation-delay: 0.1s; }
-        .section:nth-child(3) { animation-delay: 0.2s; }
-        .section:nth-child(4) { animation-delay: 0.3s; }
-        .section:nth-child(5) { animation-delay: 0.4s; }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div class="container">
-        <div class="cv-card">
-            <!-- Header Section -->
-            <div class="header">
-                <div class="profile-info">
-                    <h1 class="name">🌟 Linh Trần</h1>
-                    <p class="title">Fullstack Developer | 5+ Years Experience</p>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>📍 Quy Nhơn City, Vietnam</span>
+        <div class="header">
+            <h1>TRAN NHAT LINH</h1>
+            <h2>Software Developer</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📧</span>
+                    <span>jbloda1@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <span>📱</span>
+                    <span>+84 332562172</span>
+                </div>
+                <div class="contact-item">
+                    <span>📍</span>
+                    <span>Quy Nhon Nam, Gia Lai, Vietnam</span>
+                </div>
+                <div class="contact-item">
+                    <span>🌐</span>
+                    <a style="color: white; text-decoration: none;" href="https://github.com/jbergloda1">Github</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 class="section-title">Career Highlights</h3>
+            <div class="highlights">
+                <ul>
+                    <li><strong>4+ Years</strong> experienced Software Developer with a strong background in frontend and cross-platform mobile development</li>
+                    <li><strong>Over 4 years</strong> of experience working with JavaScript</li>
+                    <li><strong>Around 4 years</strong> of hands-on experience with modern frontend frameworks including Vue.js, React.js, and AngularJS</li>
+                    <li><strong>Approximately 2 years</strong> of experience developing cross-platform mobile applications using React Native and Flutter</li>
+                    <li><strong>1 year</strong> of backend development experience with PHP</li>
+                    <li>Experience deploying web applications on <strong>AWS</strong>, including setting up CI/CD pipelines, managing S3, and configuring Lambda functions</li>
+                    <li>Familiar with <strong>serverless architecture</strong> and microservices integration using AWS Lambda</li>
+                    <li>Proficient in <strong>Agile development methodologies</strong> and experienced in working within Scrum teams for iterative delivery and team collaboration</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 class="section-title">Technical Skills</h3>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Domain Expertise</h4>
+                    <ul class="skill-list">
+                        <li>Web Application Development</li>
+                        <li>Mobile Application Development</li>
+                        <li>Content Management Systems (CMS)</li>
+                        <li>E-commerce Platforms</li>
+                        <li>Real-time Communication Applications</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Programming & Scripting Languages</h4>
+                    <ul class="skill-list">
+                        <li><strong>Expert:</strong> JavaScript, HTML, CSS</li>
+                        <li><strong>Intermediate:</strong> Node.js, PHP, Dart</li>
+                        <li><strong>Familiar:</strong> Java, .NET (C#)</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Frameworks & Libraries</h4>
+                    <ul class="skill-list">
+                        <li>React, React Native, Vue.js, AngularJS</li>
+                        <li>Flutter, Laravel</li>
+                        <li>Entity Framework, MVC Pattern</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Database</h4>
+                    <ul class="skill-list">
+                        <li>MS SQL Server</li>
+                        <li>MySQL</li>
+                        <li>PostgreSQL</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Development Tools & Platforms</h4>
+                    <ul class="skill-list">
+                        <li>Visual Studio, Visual Studio Code, Android Studio</li>
+                        <li>Postman, Git, SVN, Trello, Jira</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Cloud & DevOps</h4>
+                    <ul class="skill-list">
+                        <li>AWS Services (Lambda, S3, EC2, etc.)</li>
+                        <li>Google Cloud Platform</li>
+                        <li>Cloudflare</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 class="section-title">Relevant Projects</h3>
+            <div class="project-grid">
+                <div class="project-item">
+                    <div class="project-title">The Bathroom Factory</div>
+                    <div class="project-description">Franchise web application that supplies and manages bathroom facilities</div>
+                    <div class="project-duties">
+                        <h5>Duties:</h5>
+                        <ul>
+                            <li>Design and implement new features</li>
+                            <li>Maintenance and bug fixing</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <h5>Technologies:</h5>
+                        <div class="tech-tags">
+                            <span class="tech-tag">.NET</span>
+                            <span class="tech-tag">MS SQL Server</span>
+                            <span class="tech-tag">Visual Studio</span>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>✉️ jbloda1@gmail.com</span>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Taurus</div>
+                    <div class="project-description">Mobile application that manages Tasks, communicates, and provides information for users from The Bathroom Factory</div>
+                    <div class="project-duties">
+                        <h5>Duties:</h5>
+                        <ul>
+                            <li>Design and implement new features</li>
+                            <li>Develop reusable components</li>
+                            <li>Maintenance and bug fixing</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <h5>Technologies:</h5>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Redux</span>
+                            <span class="tech-tag">HTML/Bootstrap</span>
+                            <span class="tech-tag">VS Code</span>
+                            <span class="tech-tag">Android Studio</span>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>📞 0332562172</span>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">MCH Cotocellar</div>
+                    <div class="project-description">Healthcare web application providing information about health, medical equipment, and medicine. Working with Japanese customers.</div>
+                    <div class="project-duties">
+                        <h5>Duties:</h5>
+                        <ul>
+                            <li>Implement and develop reusable components</li>
+                            <li>Participate in team-based development process</li>
+                            <li>Maintenance and bug fixing</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <h5>Technologies:</h5>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Vuex</span>
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">AWS Cognito</span>
+                            <span class="tech-tag">SVN</span>
+                            <span class="tech-tag">SonarQube</span>
                         </div>
-                        <div class="contact-item">
-                            <i class="fab fa-github"></i>
-                            <span>🔗 GitHub</span>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Kurz Digital</div>
+                    <div class="project-description">Web form application for product customization and configuration, serving German customers.</div>
+                    <div class="project-duties">
+                        <h5>Duties:</h5>
+                        <ul>
+                            <li>Create dynamic forms and UI workflows</li>
+                            <li>Maintain scalable frontend architecture</li>
+                            <li>Maintenance and bug fixing</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <h5>Technologies:</h5>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Git</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Excloud Platform</div>
+                    <div class="project-description">Cloud-based platform solution for Japanese enterprise clients.</div>
+                    <div class="project-duties">
+                        <h5>Duties:</h5>
+                        <ul>
+                            <li>Maintain backend modules</li>
+                            <li>Implement client-requested features</li>
+                            <li>Maintenance and bug fixing</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <h5>Technologies:</h5>
+                        <div class="tech-tags">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">Git</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">KB Global Banking Platform</div>
+                    <div class="project-description">Web banking application for Korean customers from KB Financial Group.</div>
+                    <div class="project-duties">
+                        <h5>Duties:</h5>
+                        <ul>
+                            <li>Frontend development with UI/UX focus</li>
+                            <li>Collaborate with backend team for integration</li>
+                            <li>Maintenance and bug fixing</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <h5>Technologies:</h5>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Voice Analytics System</div>
+                    <div class="project-description">Voice analysis web application used for customer service improvement.</div>
+                    <div class="project-duties">
+                        <h5>Duties:</h5>
+                        <ul>
+                            <li>Build dashboard and voice analysis features</li>
+                            <li>Work with Google Cloud services</li>
+                            <li>Maintenance and bug fixing</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <h5>Technologies:</h5>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">GCP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">ExploraScience Tour Website</div>
+                    <div class="project-description">360-degree interactive website for the ExploraScience museum in Quy Nhon.</div>
+                    <div class="project-duties">
+                        <h5>Duties:</h5>
+                        <ul>
+                            <li>Implement immersive web experience</li>
+                            <li>Customize WordPress templates and plugins</li>
+                            <li>Maintenance and bug fixing</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <h5>Technologies:</h5>
+                        <div class="tech-tags">
+                            <span class="tech-tag">WordPress</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Video Generation Platform</div>
+                    <div class="project-description">Cloud-based system that generates videos based on templates and data inputs, for UK clients.</div>
+                    <div class="project-duties">
+                        <h5>Duties:</h5>
+                        <ul>
+                            <li>Develop frontend video logic with Remotion</li>
+                            <li>Handle AWS-based video rendering workflows</li>
+                            <li>Maintenance and bug fixing</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <h5>Technologies:</h5>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Remotion</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Cloudflare</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">AI Presenter - ESTsoft</div>
+                    <div class="project-description">Virtual AI-based presentation builder for Korean clients.</div>
+                    <div class="project-duties">
+                        <h5>Duties:</h5>
+                        <ul>
+                            <li>Build interactive user interfaces</li>
+                            <li>Optimize presentation rendering</li>
+                            <li>Maintenance and bug fixing</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <h5>Technologies:</h5>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Back Office System - ESTsoft</div>
+                    <div class="project-description">Internal management system for ESTsoft, supporting business operations.</div>
+                    <div class="project-duties">
+                        <h5>Duties:</h5>
+                        <ul>
+                            <li>Design and implement Vue components</li>
+                            <li>Ensure compatibility and responsiveness</li>
+                            <li>Maintenance and bug fixing</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <h5>Technologies:</h5>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Vue.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">T-Pest System</div>
+                    <div class="project-description">Mobile and web-based application for the Plant Protection Department of Vietnam.</div>
+                    <div class="project-duties">
+                        <h5>Duties:</h5>
+                        <ul>
+                            <li>Develop cross-platform mobile features</li>
+                            <li>Maintain and test responsive web UI</li>
+                            <li>Maintenance and bug fixing</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <h5>Technologies:</h5>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Bluetooth Low Energy Data Transfer</div>
+                    <div class="project-description">Pilot project for T-Pest to enable data transfer from mobile devices to Raspberry Pi using Bluetooth Low Energy.</div>
+                    <div class="project-duties">
+                        <h5>Duties:</h5>
+                        <ul>
+                            <li>Develop BLE communication module</li>
+                            <li>Integrate mobile app with Raspberry Pi</li>
+                            <li>Test and optimize data transmission stability</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <h5>Technologies:</h5>
+                        <div class="tech-tags">
+                            <span class="tech-tag">BLE</span>
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Raspberry Pi</span>
+                            <span class="tech-tag">Linux</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Japanese Sign Language Recognition</div>
+                    <div class="project-description">Speech-to-text system for Japanese Sign Language developed by Toppa Solution, supporting accessibility for hearing-impaired users.</div>
+                    <div class="project-duties">
+                        <h5>Duties:</h5>
+                        <ul>
+                            <li>Develop frontend interface on Flutter and AngularJS</li>
+                            <li>Integrate speech-to-text processing pipeline</li>
+                            <li>Collaborate with AI/ML team for sign language recognition features</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <h5>Technologies:</h5>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">AngularJS</span>
+                            <span class="tech-tag">Speech-to-Text API</span>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Main Content -->
-            <div class="content">
-                <!-- Professional Summary -->
-                <div class="section">
-                    <h2 class="section-title">
-                        <i class="fas fa-user-tie"></i>
-                        Professional Summary
-                    </h2>
-                    <div class="summary">
-                        Versatile Fullstack Developer with over 5 years of experience in web and mobile application development. Skilled in modern frameworks like Angular, ReactJS, and VueJS on the frontend, and Node.js, PHP, and Java on the backend. Proficient in building cross-platform mobile apps using Flutter and React Native. Known for delivering high-quality, scalable solutions in Agile teams using tools like Jira and Trello. Fluent in English with excellent communication skills.
-                    </div>
-                </div>
-
-                <!-- Work Experience -->
-                <div class="section">
-                    <h2 class="section-title">
-                        <i class="fas fa-briefcase"></i>
-                        Work Experience
-                    </h2>
-                    
-                    <div class="experience-item">
-                        <h3 class="job-title">Fullstack Developer</h3>
-                        <p class="company">TMA Solutions – Quy Nhơn, Vietnam</p>
-                        <p class="duration">May 2022 – Present</p>
-                        <div class="job-description">
-                            <ul>
-                                <li>Built and maintained enterprise-grade web apps using Angular and Node.js.</li>
-                                <li>Developed Flutter apps for agriculture IoT projects under Vietnam's Ministry of Agriculture.</li>
-                                <li>Improved app performance and reduced code redundancy across multiple projects.</li>
-                                <li>Collaborated using Jira and Git for sprint planning and code reviews.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="experience-item">
-                        <h3 class="job-title">Software Engineer</h3>
-                        <p class="company">FPT Software – Remote/Ho Chi Minh City</p>
-                        <p class="duration">Mar 2019 – Apr 2022</p>
-                        <div class="job-description">
-                            <ul>
-                                <li>Developed cross-platform mobile apps with React Native and Flutter.</li>
-                                <li>Created scalable backend services with Express.js and Java Spring Boot.</li>
-                                <li>Delivered multiple frontend projects using VueJS and ReactJS.</li>
-                                <li>Worked in global Agile teams, interacting with international clients.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="experience-item">
-                        <h3 class="job-title">Junior Web Developer</h3>
-                        <p class="company">Freelance & Internships – Vietnam</p>
-                        <p class="duration">Jan 2017 – Feb 2019</p>
-                        <div class="job-description">
-                            <ul>
-                                <li>Supported small to mid-sized business websites using PHP (Laravel) and MySQL.</li>
-                                <li>Built responsive websites and dashboards with Bootstrap, jQuery, and VueJS.</li>
-                                <li>Gained experience in debugging, API integration, and user interface optimization.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Technical Skills -->
-                <div class="section">
-                    <h2 class="section-title">
-                        <i class="fas fa-code"></i>
-                        Technical Skills
-                    </h2>
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <h4><i class="fas fa-palette"></i> Frontend</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Angular</span>
-                                <span class="skill-tag">ReactJS</span>
-                                <span class="skill-tag">VueJS</span>
-                                <span class="skill-tag">HTML5</span>
-                                <span class="skill-tag">CSS3</span>
-                                <span class="skill-tag">JavaScript</span>
-                                <span class="skill-tag">TypeScript</span>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h4><i class="fas fa-server"></i> Backend</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Node.js</span>
-                                <span class="skill-tag">Express</span>
-                                <span class="skill-tag">NestJS</span>
-                                <span class="skill-tag">PHP (Laravel)</span>
-                                <span class="skill-tag">Java (Spring Boot)</span>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h4><i class="fas fa-mobile-alt"></i> Mobile</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Flutter</span>
-                                <span class="skill-tag">React Native</span>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h4><i class="fas fa-database"></i> Database & Tools</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Firebase</span>
-                                <span class="skill-tag">MySQL</span>
-                                <span class="skill-tag">MongoDB</span>
-                                <span class="skill-tag">Git</span>
-                                <span class="skill-tag">Docker</span>
-                                <span class="skill-tag">Postman</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Education -->
-                <div class="section">
-                    <h2 class="section-title">
-                        <i class="fas fa-graduation-cap"></i>
-                        Education
-                    </h2>
-                    <div class="education-item">
-                        <h3 class="education-title">Bachelor of Computer Science</h3>
-                        <p class="education-school">Quy Nhơn University – Vietnam</p>
-                        <p class="education-year">Graduated: 2017</p>
-                    </div>
-                </div>
-
-                <!-- Certifications -->
-                <div class="section">
-                    <h2 class="section-title">
-                        <i class="fas fa-certificate"></i>
-                        Certifications
-                    </h2>
-                    <div class="certification-item">
-                        <h3 class="certification-title">Google Flutter Development Certificate</h3>
-                        <p class="certification-issuer">Google</p>
-                        <p class="certification-year">2021</p>
-                    </div>
-                    <div class="certification-item">
-                        <h3 class="certification-title">AWS Cloud Practitioner</h3>
-                        <p class="certification-issuer">Amazon Web Services</p>
-                        <p class="certification-year">2023</p>
-                    </div>
-                    <div class="certification-item">
-                        <h3 class="certification-title">IELTS 7.0</h3>
-                        <p class="certification-issuer">British Council</p>
-                        <p class="certification-year">2022</p>
+        <div class="section">
+            <h3 class="section-title">Education</h3>
+            <div class="education-item">
+                <div class="education-header">
+                    <div>
+                        <div class="school">Quy Nhon University, Vietnam</div>
+                        <div class="degree">Bachelor of Information Technology</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-  </body>
-</html>
+</body>
+</html> 
