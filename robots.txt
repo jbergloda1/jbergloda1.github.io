@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://jbergloda1.github.io/sitemap.xml
+
+# Disallow specific files/directories if needed
+# Disallow: /private/
+# Disallow: /admin/
+
+# Allow all search engines to crawl the site
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Crawl delay (optional)
+Crawl-delay: 1 
